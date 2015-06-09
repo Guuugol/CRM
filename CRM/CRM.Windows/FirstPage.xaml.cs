@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -28,34 +29,55 @@ namespace CRM
     public sealed partial class FirstPage : Page
     {
 
-
+    
 
         public FirstPage()
         {
             this.InitializeComponent();
         }
         
-        public async Task<int> CallGetLoginData(string login)
+        public async void CallGetLoginData(string login)
         {
             var cl = new ServiceReference.DataServiceClient();
 
-            var results = await cl.GetLoginDataAsync(login); //new GetTestListRequest(){}
-            var result = results; //.GetTestListResult
-            if(result != null)
+            try
             {
-                return  1;
+                var results = await cl.GetLoginDataAsync(login);
+                var result = results;
+
+                if (String.IsNullOrEmpty(result))
+                {
+                    System.Exception ex = new Exception();
+                    throw ex;
+                }
+                //else
+                //{
+                //    //var contactPage = new ContactPage();
+                 //   Frame.Navigate(typeof(ContactPage));
+                //}
             }
-            else
+            catch (Exception ex)
             {
-                return 0;
+                var dialog = new MessageDialog("Неверное имя пользователя");
+                dialog.ShowAsync();
+                
+                //tbLogin.Text = "";
+                // throw;
             }
-        }
+            finally
+            {
+                var contactPage = new ContactPage();
+                Frame.Navigate(typeof(ContactPage));
+            }
+          
+            
+       }
         
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             var caption = tbLogin.Text;
             
-            if (caption.Length == 0)
+            if (String.IsNullOrEmpty(caption))
             {
                 //tbError.Text = "Введите имя пользователя";
                 //tbError.Visibility = Visibility.Visible;
@@ -64,26 +86,23 @@ namespace CRM
             }
             else
             {
-                Task<int> task = CallGetLoginData(caption);
-                task.RunSynchronously();
-                var right = task.Result;
+                CallGetLoginData(caption);
+                //task.RunSynchronously();
+               // var right = task.Result;
                // t.RunSynchronously();
                 //CallGetLoginData(caption).RunSynchronously();
                 //Task task = new ServiceReference.DataServiceClient().GetLoginDataAsync(caption);
                 //task.Wait();
-                if(right == 1)
-                {
-                    //var contactPage = new ContactPage();
-                    Frame.Navigate(typeof(ContactPage));
-                }
-                else
-                {
-                    var dialog = new MessageDialog("Неверное имя пользователя");
-                    dialog.ShowAsync();
-                    //tbLogin.Text = "";
-                }
+                
             }
         }
 
+        private void TbLogin_OnKeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == VirtualKey.Enter)
+            {
+                btnLogin_Click(null, null);
+            }
+        }
     }
 }

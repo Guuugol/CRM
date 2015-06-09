@@ -46,8 +46,9 @@ namespace DataBaseWCF
             using (var db = new CRMEntities())
             {
                // var loginQuery = from c in db.tbl_Manager where c.Name == login select c.Name;
-                var managerQuery = from man in db.tbl_Manager where man.Name == login select man.Name; 
-                return managerQuery.ToString();
+                var manager = ( from man in db.tbl_Manager where man.Name == login select man.Name).First().ToString(); 
+                
+                return manager;
             }
         }
     }

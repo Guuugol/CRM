@@ -140,9 +140,6 @@
     <None Include="Service References\ServiceReference\DataWCF.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference\DataWCF1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\ServiceReference\DataWCF2.xsd">
       <SubType>Designer</SubType>
     </None>

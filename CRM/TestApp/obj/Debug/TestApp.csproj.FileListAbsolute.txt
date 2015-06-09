@@ -16,3 +16,12 @@ C:\Users\SYShchipanov\Desktop\CRM\TestApp\bin\Debug\EntityFramework.dll
 C:\Users\SYShchipanov\Desktop\CRM\TestApp\bin\Debug\EntityFramework.xml
 C:\Users\SYShchipanov\Desktop\CRM\TestApp\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\SYShchipanov\Desktop\CRM\TestApp\obj\Debug\TestApp.csprojResolveAssemblyReference.cache
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\TestApp\bin\Debug\TestApp.exe.config
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\TestApp\bin\Debug\TestApp.exe
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\TestApp\bin\Debug\TestApp.pdb
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\TestApp\bin\Debug\EntityFramework.dll
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\TestApp\bin\Debug\EntityFramework.xml
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\TestApp\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\TestApp\obj\Debug\TestApp.csprojResolveAssemblyReference.cache
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\TestApp\obj\Debug\TestApp.exe
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\TestApp\obj\Debug\TestApp.pdb

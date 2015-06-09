@@ -7,16 +7,16 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>6c0dcad3-0d9f-46a8-8807-f8909b7f21e0</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\bin\x86\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\bin\x86\Debug\CRM.Windows.exe">
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\CRM.Windows.exe">
       <PackagePath>CRM.Windows.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\References\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI.winmd">
@@ -148,38 +148,38 @@
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI\ormma.js">
       <PackagePath>Microsoft.Advertising.WinRT.UI\ormma.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\bin\x86\Debug\ContactPage.xbf">
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\ContactPage.xbf">
       <PackagePath>ContactPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\bin\x86\Debug\FirstPage.xbf">
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\FirstPage.xbf">
       <PackagePath>FirstPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\bin\x86\Debug\MeetingPage.xbf">
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\MeetingPage.xbf">
       <PackagePath>MeetingPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\bin\x86\Debug\CRM.Windows.xr.xml">
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\CRM.Windows.xr.xml">
       <PackagePath>CRM.Windows.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\SYShchipanov\Desktop\CRM\CRM.Windows\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

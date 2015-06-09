@@ -9,8 +9,8 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBlock x:Name="LoginBlock" HorizontalAlignment="Left" Margin="756,148,0,0" TextWrapping="Wrap" Text="Введите имя пользователя" VerticalAlignment="Top" Height="31" Width="302" FontSize="24"/>
-        <TextBox x:Name="tbLogin" HorizontalAlignment="Left" Margin="756,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="302"/>
-        <Button x:ConnectionId='1' x:Name="btnLogin" Content="Вход" HorizontalAlignment="Left" Margin="947,297,0,0" VerticalAlignment="Top" Width="114" Height="44"                       />
+        <TextBox x:ConnectionId='1' x:Name="tbLogin" HorizontalAlignment="Left" Margin="756,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="302"                            />
+        <Button x:ConnectionId='2' x:Name="btnLogin" Content="Вход" HorizontalAlignment="Left" Margin="947,297,0,0" VerticalAlignment="Top" Width="114" Height="44"                       />
         <TextBox x:Name="tbError" HorizontalAlignment="Left" Margin="756,362,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="302" Visibility="Collapsed" BorderBrush="{ThemeResource ApplicationPageBackgroundThemeBrush}" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" RequestedTheme="Dark" CharacterSpacing="-7"/>
 
     </Grid>
