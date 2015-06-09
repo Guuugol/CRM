@@ -1,0 +1,18 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <ReferenceAssembly PathName="c:\program files\microsoft sdks\windows\v8.1\extensionsdks\mstestframework\11.0\references\commonconfiguration\neutral\microsoft.visualstudio.testplatform.unittestframework.appcontainer.dll" HashGuid="b6bd2ba6-e56a-d30b-bf2a-f65eae767759" />
+    <ReferenceAssembly PathName="c:\program files\microsoft sdks\windows\v8.1\extensionsdks\mstestframework\11.0\references\commonconfiguration\neutral\microsoft.visualstudio.testplatform.unittestframework.dll" HashGuid="ba7c884e-6acc-6fb7-0e4c-8e4b4b26292d" />
+    <ReferenceAssembly PathName="c:\program files\microsoft sdks\windows\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows 8.1 xaml q2 2014\extensionsdks\core\references\commonconfiguration\neutral\telerik.core.dll" HashGuid="6671babb-4f09-d0f5-12c3-92577b0b7077" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows 8.1 xaml q2 2014\extensionsdks\map\references\commonconfiguration\arm\telerik.geospatial.dll" HashGuid="80c21a66-6485-290c-4d93-0a81df75c00d" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows 8.1 xaml q2 2014\extensionsdks\datastorage\references\commonconfiguration\arm\telerik.storage.extensions.dll" HashGuid="a427d70f-3259-ceaa-e283-00f4c9fe3ca8" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows 8.1 xaml q2 2014\extensionsdks\map\references\commonconfiguration\arm\telerik.ui.drawing.winmd" HashGuid="83fcf851-8097-e3e2-466f-03fcb722aebc" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows 8.1 xaml q2 2014\extensionsdks\core\references\commonconfiguration\neutral\telerik.ui.xaml.chart.dll" HashGuid="c08860fa-e604-dcc7-10b0-cbedae213c9e" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows 8.1 xaml q2 2014\extensionsdks\grid.datastorageprovider\references\commonconfiguration\arm\telerik.ui.xaml.controls.dataprovider.dll" HashGuid="0320856e-5246-8c4b-5dcc-b4d1bf4d7f9b" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows 8.1 xaml q2 2014\extensionsdks\core\references\commonconfiguration\neutral\telerik.ui.xaml.datavisualization.dll" HashGuid="88331b4f-c525-58f2-2c32-59ae74e66fa9" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows 8.1 xaml q2 2014\extensionsdks\core\references\commonconfiguration\neutral\telerik.ui.xaml.grid.dll" HashGuid="1a70cee7-fac5-d3c2-f20c-abdb328a6ab7" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows 8.1 xaml q2 2014\extensionsdks\core\references\commonconfiguration\neutral\telerik.ui.xaml.input.dll" HashGuid="e2d48c1e-3bb6-a40b-2ddf-df54c212da7a" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows 8.1 xaml q2 2014\extensionsdks\map\references\commonconfiguration\arm\telerik.ui.xaml.map.dll" HashGuid="7b2321c5-1eb0-b95e-6d6f-98ec550d3097" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows 8.1 xaml q2 2014\extensionsdks\core\references\commonconfiguration\neutral\telerik.ui.xaml.primitives.dll" HashGuid="438150fd-0781-31d9-e0a9-268239217175" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

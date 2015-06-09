@@ -1,0 +1,15 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CRM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Grid="using:Telerik.UI.Xaml.Controls.Grid"
+    x:Class="CRM.MainPage"
+    mc:Ignorable="d">
+        <Grid x:Name="grdBack" Background="White">
+            <Grid:RadDataGrid x:Name="grdContact" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="1106" Margin="260,0,0,0"/>
+        </Grid>
+
+</Page>
+

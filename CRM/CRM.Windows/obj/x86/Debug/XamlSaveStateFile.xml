@@ -1,0 +1,14 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\syshchipanov\desktop\crm\crm.windows\obj\x86\debug\intermediatexaml\crm.windows.exe" HashGuid="37bd0f10-aeaa-6d08-e610-a821524f8143" />
+    <ReferenceAssembly PathName="c:\program files\microsoft sdks\windows\v8.1\extensionsdks\msadvertisingxaml\8.1\references\commonconfiguration\neutral\microsoft.advertising.winrt.ui.winmd" HashGuid="6588494d-37e3-4bf8-bf82-6a4bc10c0818" />
+    <ReferenceAssembly PathName="c:\program files\microsoft sdks\windows\v8.1\extensionsdks\msadvertisingxaml\8.1\references\commonconfiguration\neutral\microsoftadvertising.winmd" HashGuid="0dde57b7-8c99-5b9a-0771-4cdcca925c59" />
+    <ReferenceAssembly PathName="c:\program files\microsoft sdks\windows\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows universal q3 2014\sdks\windows 8.1\telerik ui for windows universal\references\commonconfiguration\neutral\telerik.core.dll" HashGuid="d7a840a7-040e-1c2d-4a95-0484471b8773" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows universal q3 2014\sdks\windows 8.1\telerik ui for windows universal\references\commonconfiguration\neutral\telerik.ui.xaml.chart.dll" HashGuid="8c6eac6c-a7c5-c3ed-2a1b-c5e62cc7911a" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows universal q3 2014\sdks\windows 8.1\telerik ui for windows universal\references\commonconfiguration\neutral\telerik.ui.xaml.datavisualization.dll" HashGuid="6d9355c0-0957-69c0-6395-11bac6d33bca" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows universal q3 2014\sdks\windows 8.1\telerik ui for windows universal\references\commonconfiguration\neutral\telerik.ui.xaml.grid.dll" HashGuid="9c6dc2c0-642d-e8b3-b0df-2e84cdfc8bc7" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows universal q3 2014\sdks\windows 8.1\telerik ui for windows universal\references\commonconfiguration\neutral\telerik.ui.xaml.input.dll" HashGuid="ccf78100-7ea7-2d52-6dd9-73a34c6dbce3" />
+    <ReferenceAssembly PathName="c:\program files\telerik\ui for windows universal q3 2014\sdks\windows 8.1\telerik ui for windows universal\references\commonconfiguration\neutral\telerik.ui.xaml.primitives.dll" HashGuid="81e51ff4-fc9c-bf32-8770-485fa453c754" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

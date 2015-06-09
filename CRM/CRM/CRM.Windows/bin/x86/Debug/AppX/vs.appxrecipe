@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WIN-J2OBO120VJ2</Machine>
+    <WindowsUser>SYShchipanov</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>6c0dcad3-0d9f-46a8-8807-f8909b7f21e0</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\CRM\CRM.Windows\obj\x86\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>0EA3BC07A9D20E1D3DE6A7665750E3657951F58B764E162A9D3124021AA9D979</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>6c0dcad3-0d9f-46a8-8807-f8909b7f21e0_1.0.0.0_x86__b0vwqa261rqn4</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>6c0dcad3-0d9f-46a8-8807-f8909b7f21e0_b0vwqa261rqn4!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>6c0dcad3-0d9f-46a8-8807-f8909b7f21e0</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=SYShchipanov</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\CRM\CRM.Windows\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-05-06T18:48:28.601</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\CRM\CRM.Windows\bin\x86\Debug\CRM.Windows.exe">
+      <PackagePath>CRM.Windows.exe</PackagePath>
+      <Modified>2015-05-06T18:48:28.210</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\References\CommonConfiguration\neutral\Telerik.Core.dll">
+      <PackagePath>Telerik.Core.dll</PackagePath>
+      <Modified>2014-06-17T10:40:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\References\CommonConfiguration\neutral\Telerik.UI.Xaml.Chart.dll">
+      <PackagePath>Telerik.UI.Xaml.Chart.dll</PackagePath>
+      <Modified>2014-06-17T10:40:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\References\CommonConfiguration\neutral\Telerik.UI.Xaml.DataVisualization.dll">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization.dll</PackagePath>
+      <Modified>2014-06-17T10:40:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\References\CommonConfiguration\neutral\Telerik.UI.Xaml.Grid.dll">
+      <PackagePath>Telerik.UI.Xaml.Grid.dll</PackagePath>
+      <Modified>2014-06-17T10:41:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\References\CommonConfiguration\neutral\Telerik.UI.Xaml.Input.dll">
+      <PackagePath>Telerik.UI.Xaml.Input.dll</PackagePath>
+      <Modified>2014-06-17T10:40:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\References\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives.dll">
+      <PackagePath>Telerik.UI.Xaml.Primitives.dll</PackagePath>
+      <Modified>2014-06-17T10:40:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Chart\Themes\Generic.xbf">
+      <PackagePath>Telerik.UI.Xaml.Chart\Themes\Generic.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.DataVisualization\Themes\Generic.xbf">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization\Themes\Generic.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Grid\Themes\Generic.xbf">
+      <PackagePath>Telerik.UI.Xaml.Grid\Themes\Generic.xbf</PackagePath>
+      <Modified>2014-06-17T10:41:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Input\Themes\Generic.xbf">
+      <PackagePath>Telerik.UI.Xaml.Input\Themes\Generic.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\Generic.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\Generic.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsDark.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeColorsLight.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Chart\Themes\ThemeResourcesDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.Chart\Themes\ThemeResourcesDark.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.DataVisualization\Themes\ThemeResourcesDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization\Themes\ThemeResourcesDark.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Grid\Themes\ThemeResourcesDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.Grid\Themes\ThemeResourcesDark.xbf</PackagePath>
+      <Modified>2014-06-17T10:41:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Input\Themes\ThemeResourcesDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.Input\Themes\ThemeResourcesDark.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesDark.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Chart\Themes\ThemeResourcesLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.Chart\Themes\ThemeResourcesLight.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.DataVisualization\Themes\ThemeResourcesLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.DataVisualization\Themes\ThemeResourcesLight.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Grid\Themes\ThemeResourcesLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.Grid\Themes\ThemeResourcesLight.xbf</PackagePath>
+      <Modified>2014-06-17T10:41:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Input\Themes\ThemeResourcesLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.Input\Themes\ThemeResourcesLight.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files\Telerik\UI for Windows 8.1 XAML Q2 2014\ExtensionSDKs\Core\Redist\CommonConfiguration\neutral\Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xbf">
+      <PackagePath>Telerik.UI.Xaml.Primitives\Themes\ThemeResourcesLight.xbf</PackagePath>
+      <Modified>2014-06-17T10:40:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\CRM\CRM.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\CRM\CRM.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\CRM\CRM.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\CRM\CRM.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\CRM\CRM.Windows\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-05-06T18:16:53.969</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\CRM\CRM.Windows\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-05-06T18:48:26.727</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\CRM\CRM.Windows\bin\x86\Debug\CRM.Windows.xr.xml">
+      <PackagePath>CRM.Windows.xr.xml</PackagePath>
+      <Modified>2015-05-06T18:48:26.638</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\CRM\CRM.Windows\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-05-06T18:48:28.496</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

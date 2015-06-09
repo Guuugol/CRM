@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="CRM.FirstPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CRM"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="LoginBlock" HorizontalAlignment="Left" Margin="756,148,0,0" TextWrapping="Wrap" Text="Введите имя пользователя" VerticalAlignment="Top" Height="31" Width="302" FontSize="24"/>
+        <TextBox x:Name="tbLogin" HorizontalAlignment="Left" Margin="756,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="302"/>
+        <Button x:ConnectionId='1' x:Name="btnLogin" Content="Вход" HorizontalAlignment="Left" Margin="947,297,0,0" VerticalAlignment="Top" Width="114" Height="44"                       />
+        <TextBox x:Name="tbError" HorizontalAlignment="Left" Margin="756,362,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="302" Visibility="Collapsed" BorderBrush="{ThemeResource ApplicationPageBackgroundThemeBrush}" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}" RequestedTheme="Dark" CharacterSpacing="-7"/>
+
+    </Grid>
+</Page>
+

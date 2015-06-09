@@ -1,0 +1,9 @@
+C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\WCFTestConsole\bin\Debug\WCFTestConsole.exe.config
+C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\WCFTestConsole\bin\Debug\WCFTestConsole.exe
+C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\WCFTestConsole\bin\Debug\WCFTestConsole.pdb
+C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\WCFTestConsole\obj\Debug\WCFTestConsole.csprojResolveAssemblyReference.cache
+C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\WCFTestConsole\obj\Debug\WCFTestConsole.exe
+C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\WCFTestConsole\obj\Debug\WCFTestConsole.pdb
+C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\WCFTestConsole\bin\Debug\EntityFramework.dll
+C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\WCFTestConsole\bin\Debug\EntityFramework.xml
+C:\Users\SYShchipanov\Documents\Visual Studio 2013\Projects\CRM\WCFTestConsole\bin\Debug\ru\EntityFramework.resources.dll

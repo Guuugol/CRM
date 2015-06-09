@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище CRMModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telephone" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="E-mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ContactID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Manager">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ContactID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SupervisorID" Type="uniqueidentifier" />
+    <Property Name="Name" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Meeting">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CustomerID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ManagerID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="GoalID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ResultID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_MeetingGoal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_MeetingResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_Task">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ManagerID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CustomerID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TaskTypeID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TaskResultID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_TaskResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_TaskType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tbl_Customer_tbl_Contact">
+    <End Role="tbl_Contact" Type="Self.tbl_Contact" Multiplicity="1" />
+    <End Role="tbl_Customer" Type="Self.tbl_Customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Contact">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Customer">
+        <PropertyRef Name="ContactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Manager_tbl_Contact">
+    <End Role="tbl_Contact" Type="Self.tbl_Contact" Multiplicity="1" />
+    <End Role="tbl_Manager" Type="Self.tbl_Manager" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Contact">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Manager">
+        <PropertyRef Name="ContactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Meeting_tbl_Customer">
+    <End Role="tbl_Customer" Type="Self.tbl_Customer" Multiplicity="1" />
+    <End Role="tbl_Meeting" Type="Self.tbl_Meeting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Meeting">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Meeting_tbl_Manager">
+    <End Role="tbl_Manager" Type="Self.tbl_Manager" Multiplicity="1" />
+    <End Role="tbl_Meeting" Type="Self.tbl_Meeting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Manager">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Meeting">
+        <PropertyRef Name="ManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Meeting_tbl_MeetingGoal">
+    <End Role="tbl_MeetingGoal" Type="Self.tbl_MeetingGoal" Multiplicity="1" />
+    <End Role="tbl_Meeting" Type="Self.tbl_Meeting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MeetingGoal">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Meeting">
+        <PropertyRef Name="GoalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Meeting_tbl_MeetingResult">
+    <End Role="tbl_MeetingResult" Type="Self.tbl_MeetingResult" Multiplicity="1" />
+    <End Role="tbl_Meeting" Type="Self.tbl_Meeting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_MeetingResult">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Meeting">
+        <PropertyRef Name="ResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Task_tbl_Customer">
+    <End Role="tbl_Customer" Type="Self.tbl_Customer" Multiplicity="1" />
+    <End Role="tbl_Task" Type="Self.tbl_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Task">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Task_tbl_Manager">
+    <End Role="tbl_Manager" Type="Self.tbl_Manager" Multiplicity="1" />
+    <End Role="tbl_Task" Type="Self.tbl_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Manager">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Task">
+        <PropertyRef Name="ManagerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Task_tbl_TaskResult">
+    <End Role="tbl_TaskResult" Type="Self.tbl_TaskResult" Multiplicity="1" />
+    <End Role="tbl_Task" Type="Self.tbl_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_TaskResult">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Task">
+        <PropertyRef Name="TaskResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Task_tbl_TaskType">
+    <End Role="tbl_TaskType" Type="Self.tbl_TaskType" Multiplicity="1" />
+    <End Role="tbl_Task" Type="Self.tbl_Task" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_TaskType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tbl_Task">
+        <PropertyRef Name="TaskTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище CRMModelContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Contact" EntityType="Self.tbl_Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Customer" EntityType="Self.tbl_Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Manager" EntityType="Self.tbl_Manager" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Meeting" EntityType="Self.tbl_Meeting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MeetingGoal" EntityType="Self.tbl_MeetingGoal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_MeetingResult" EntityType="Self.tbl_MeetingResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Task" EntityType="Self.tbl_Task" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_TaskResult" EntityType="Self.tbl_TaskResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_TaskType" EntityType="Self.tbl_TaskType" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbl_Customer_tbl_Contact" Association="Self.FK_tbl_Customer_tbl_Contact">
+      <End Role="tbl_Contact" EntitySet="tbl_Contact" />
+      <End Role="tbl_Customer" EntitySet="tbl_Customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Manager_tbl_Contact" Association="Self.FK_tbl_Manager_tbl_Contact">
+      <End Role="tbl_Contact" EntitySet="tbl_Contact" />
+      <End Role="tbl_Manager" EntitySet="tbl_Manager" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Meeting_tbl_Customer" Association="Self.FK_tbl_Meeting_tbl_Customer">
+      <End Role="tbl_Customer" EntitySet="tbl_Customer" />
+      <End Role="tbl_Meeting" EntitySet="tbl_Meeting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Meeting_tbl_Manager" Association="Self.FK_tbl_Meeting_tbl_Manager">
+      <End Role="tbl_Manager" EntitySet="tbl_Manager" />
+      <End Role="tbl_Meeting" EntitySet="tbl_Meeting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Meeting_tbl_MeetingGoal" Association="Self.FK_tbl_Meeting_tbl_MeetingGoal">
+      <End Role="tbl_MeetingGoal" EntitySet="tbl_MeetingGoal" />
+      <End Role="tbl_Meeting" EntitySet="tbl_Meeting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Meeting_tbl_MeetingResult" Association="Self.FK_tbl_Meeting_tbl_MeetingResult">
+      <End Role="tbl_MeetingResult" EntitySet="tbl_MeetingResult" />
+      <End Role="tbl_Meeting" EntitySet="tbl_Meeting" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Task_tbl_Customer" Association="Self.FK_tbl_Task_tbl_Customer">
+      <End Role="tbl_Customer" EntitySet="tbl_Customer" />
+      <End Role="tbl_Task" EntitySet="tbl_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Task_tbl_Manager" Association="Self.FK_tbl_Task_tbl_Manager">
+      <End Role="tbl_Manager" EntitySet="tbl_Manager" />
+      <End Role="tbl_Task" EntitySet="tbl_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Task_tbl_TaskResult" Association="Self.FK_tbl_Task_tbl_TaskResult">
+      <End Role="tbl_TaskResult" EntitySet="tbl_TaskResult" />
+      <End Role="tbl_Task" EntitySet="tbl_Task" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Task_tbl_TaskType" Association="Self.FK_tbl_Task_tbl_TaskType">
+      <End Role="tbl_TaskType" EntitySet="tbl_TaskType" />
+      <End Role="tbl_Task" EntitySet="tbl_Task" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

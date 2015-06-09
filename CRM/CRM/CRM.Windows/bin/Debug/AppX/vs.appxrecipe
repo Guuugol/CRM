@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WIN-J2OBO120VJ2</Machine>
+    <WindowsUser>SYShchipanov</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>6c0dcad3-0d9f-46a8-8807-f8909b7f21e0</PackageIdentityName>
+    <IntermediateOutputPath>c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>5E0E5117FC14BAA63B8AB3E917C2207A45B1C3C6CB3C03F3A5FB8CF0870C0394</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>6c0dcad3-0d9f-46a8-8807-f8909b7f21e0_1.0.0.0_neutral__b0vwqa261rqn4</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>6c0dcad3-0d9f-46a8-8807-f8909b7f21e0_b0vwqa261rqn4!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>6c0dcad3-0d9f-46a8-8807-f8909b7f21e0</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=SYShchipanov</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-12T16:59:53.430</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\bin\Debug\CRM.Windows.exe">
+      <PackagePath>CRM.Windows.exe</PackagePath>
+      <Modified>2015-04-12T16:59:52.376</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T07:55:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-04-12T16:59:52.062</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-04-12T16:59:52.065</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\bin\Debug\CRM.Windows.xr.xml">
+      <PackagePath>CRM.Windows.xr.xml</PackagePath>
+      <Modified>2015-04-12T16:59:51.744</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-04-12T16:59:52.874</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

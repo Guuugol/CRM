@@ -1,0 +1,1 @@
+c:\users\syshchipanov\documents\visual studio 2013\Projects\CRM\CRM\CRM.Windows\CRM.Windows.csproj;neutral

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a200271f655c4d6c9d66daefce241b48" Name="Diagram1">
+        <EntityTypeShape EntityType="CRMModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.tbl_Contact" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.tbl_Customer" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.tbl_Manager" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.tbl_Meeting" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.tbl_MeetingGoal" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.tbl_MeetingResult" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.tbl_Task" Width="1.5" PointX="8.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.tbl_TaskResult" Width="1.5" PointX="6" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.tbl_TaskType" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <AssociationConnector Association="CRMModel.FK_tbl_Customer_tbl_Contact" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_tbl_Manager_tbl_Contact" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_tbl_Meeting_tbl_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_tbl_Task_tbl_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_tbl_Meeting_tbl_Manager" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_tbl_Task_tbl_Manager" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_tbl_Meeting_tbl_MeetingGoal" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_tbl_Meeting_tbl_MeetingResult" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_tbl_Task_tbl_TaskResult" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_tbl_Task_tbl_TaskType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
