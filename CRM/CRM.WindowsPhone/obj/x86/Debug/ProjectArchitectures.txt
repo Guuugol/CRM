@@ -1,0 +1,1 @@
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.WindowsPhone\CRM.WindowsPhone.csproj;x86

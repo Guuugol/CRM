@@ -4,7 +4,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
-using TestApp;
+using DataBaseWCF;
 //using WCFTestingServise;
 //using DataType = System.ComponentModel.DataAnnotations.DataType;
 
@@ -39,16 +39,16 @@ namespace DataBaseWCF
             Console.WriteLine("data: " + a1);
         }
 
-        public string GetLoginData(string login)
+        public List<string> GetLoginData()
         {
             Console.WriteLine("Method: GetLoginData");
             Console.WriteLine("Method: GetLoginData");
             using (var db = new CRMEntities())
             {
+                //Data Source=WIN-J2OBO120VJ2;Initial Catalog=CRM;Integrated Security=True;
                // var loginQuery = from c in db.tbl_Manager where c.Name == login select c.Name;
-                var manager = ( from man in db.tbl_Manager where man.Name == login select man.Name).First().ToString(); 
-                
-                return manager;
+                var managers = (from man in db.tbl_Manager select man.Name).ToList();
+                return managers;
             }
         }
     }

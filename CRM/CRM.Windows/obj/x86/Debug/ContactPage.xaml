@@ -7,13 +7,14 @@
     xmlns:Grid="using:Telerik.UI.Xaml.Controls.Grid"
     xmlns:Input="using:Telerik.UI.Xaml.Controls.Input"
     x:Class="CRM.ContactPage"
-    mc:Ignorable="d" Width="1363">
-    <Grid x:Name="grdBack" Background="White">
+    mc:Ignorable="d" Width="1363" BorderBrush="#FF1D1D1D">
+
+    <Grid x:Name="grdBack" Background="White" Margin="0,0,-10,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="12*"/>
-            <ColumnDefinition Width="671*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Grid:RadDataGrid x:Name="grdContact" HorizontalAlignment="Left" VerticalAlignment="Top" Height="768" Width="1363" Grid.ColumnSpan="2" />
+        <Grid:RadDataGrid x:Name="grdContact" HorizontalAlignment="Left" VerticalAlignment="Top" Height="681" Width="1373" Grid.ColumnSpan="2" Margin="0,87,0,0" BorderBrush="#FF1D1D1D" />
     </Grid>
 
 </Page>

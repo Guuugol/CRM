@@ -101,7 +101,7 @@ namespace CRM.ServiceReference {
         System.Threading.Tasks.Task PrintDataAsync(int id, string a1);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetLoginData", ReplyAction="http://tempuri.org/IDataService/GetLoginDataResponse")]
-        System.Threading.Tasks.Task<string> GetLoginDataAsync(string login);
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetLoginDataAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -155,8 +155,8 @@ namespace CRM.ServiceReference {
             return base.Channel.PrintDataAsync(id, a1);
         }
         
-        public System.Threading.Tasks.Task<string> GetLoginDataAsync(string login) {
-            return base.Channel.GetLoginDataAsync(login);
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetLoginDataAsync() {
+            return base.Channel.GetLoginDataAsync();
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync() {

@@ -42,36 +42,32 @@ namespace CRM
 
             try
             {
-                var results = await cl.GetLoginDataAsync(login);
-                var result = results;
+                var results = await cl.GetLoginDataAsync();
+                
 
-                if (String.IsNullOrEmpty(result))
+                if (!results.Contains(login))
                 {
                     System.Exception ex = new Exception();
                     throw ex;
                 }
-                //else
-                //{
-                //    //var contactPage = new ContactPage();
-                 //   Frame.Navigate(typeof(ContactPage));
-                //}
             }
             catch (Exception ex)
             {
                 var dialog = new MessageDialog("Неверное имя пользователя");
                 dialog.ShowAsync();
-                
+                return;
+
                 //tbLogin.Text = "";
                 // throw;
             }
-            finally
-            {
-                var contactPage = new ContactPage();
-                Frame.Navigate(typeof(ContactPage));
-            }
-          
-            
-       }
+                
+            var contactPage = new ContactPage();
+            Frame.Navigate(typeof(ContactPage));
+            return;
+
+
+
+        }
         
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {

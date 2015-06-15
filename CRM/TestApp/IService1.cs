@@ -22,7 +22,7 @@ namespace DataBaseWCF
 
 
         [OperationContract]
-        string GetLoginData(string login);
+        List<string> GetLoginData();
 
     }
 

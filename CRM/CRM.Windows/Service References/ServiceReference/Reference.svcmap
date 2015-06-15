@@ -24,11 +24,12 @@
     <MetadataSource Address="http://localhost:8082/DataWCF" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DataWCF3.xsd" MetadataType="Schema" ID="f4009087-4c17-4f74-ae93-61f1f1b3cbed" SourceId="1" SourceUrl="http://localhost:8082/DataWCF?xsd=xsd1" />
     <MetadataFile FileName="DataService.wsdl" MetadataType="Wsdl" ID="eb72771a-8f6c-413e-8b81-62b6957325ec" SourceId="1" SourceUrl="http://localhost:8082/DataWCF?wsdl" />
-    <MetadataFile FileName="DataWCF2.xsd" MetadataType="Schema" ID="794776c5-5657-4cc2-9056-8c5b1f7dfa4a" SourceId="1" SourceUrl="http://localhost:8082/DataWCF?xsd=xsd0" />
     <MetadataFile FileName="DataWCF.disco" MetadataType="Disco" ID="c2d7b28c-8acc-4533-a432-89f6040e9454" SourceId="1" SourceUrl="http://localhost:8082/DataWCF?disco" />
     <MetadataFile FileName="DataWCF.xsd" MetadataType="Schema" ID="5e881ff7-60ec-4753-ad18-9a0994a7948e" SourceId="1" SourceUrl="http://localhost:8082/DataWCF?xsd=xsd2" />
+    <MetadataFile FileName="DataWCF1.xsd" MetadataType="Schema" ID="17e8afe3-1515-453e-a41f-6b79701e644f" SourceId="1" SourceUrl="http://localhost:8082/DataWCF?xsd=xsd3" />
+    <MetadataFile FileName="DataWCF2.xsd" MetadataType="Schema" ID="794776c5-5657-4cc2-9056-8c5b1f7dfa4a" SourceId="1" SourceUrl="http://localhost:8082/DataWCF?xsd=xsd0" />
+    <MetadataFile FileName="DataWCF3.xsd" MetadataType="Schema" ID="f4009087-4c17-4f74-ae93-61f1f1b3cbed" SourceId="1" SourceUrl="http://localhost:8082/DataWCF?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

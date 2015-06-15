@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestApp
+namespace DataBaseWCF
 {
     using System;
     using System.Collections.Generic;
