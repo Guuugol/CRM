@@ -55,7 +55,7 @@
 
         <!-- Список элементов с вертикальной прокруткой -->
         <ListView
-            x:Name="itemListView"
+            x:Name="meetingListView"
             AutomationProperties.AutomationId="ItemsListView"
             AutomationProperties.Name="Items"
             TabIndex="1"
@@ -97,7 +97,7 @@
             Grid.Column="1"
             Grid.RowSpan="2"
             Padding="60,0,66,0"
-            DataContext="{Binding SelectedItem, ElementName=itemListView}"
+            DataContext="{Binding SelectedItem, ElementName=meetingListView}"
             HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
             ScrollViewer.HorizontalScrollMode="Disabled" ScrollViewer.VerticalScrollMode="Enabled"
             ScrollViewer.ZoomMode="Disabled">
@@ -138,7 +138,7 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemDetail" Storyboard.TargetProperty="Visibility">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemListView" Storyboard.TargetProperty="Padding">
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="meetingListView" Storyboard.TargetProperty="Padding">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="120,0,90,60"/>
                         </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
@@ -155,7 +155,7 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="primaryColumn" Storyboard.TargetProperty="Width">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="0"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemListView" Storyboard.TargetProperty="Visibility">
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="meetingListView" Storyboard.TargetProperty="Visibility">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
                         </ObjectAnimationUsingKeyFrames>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemDetail" Storyboard.TargetProperty="(Grid.Row)">

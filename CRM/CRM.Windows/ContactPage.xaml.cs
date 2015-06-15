@@ -64,6 +64,7 @@ namespace CRM
             public string EMail { get; set; }
 
         }
+
     }
 }
     

@@ -58,7 +58,7 @@ namespace CRM
             // Настройка логических компонентов навигации по страницам, позволяющих
             // чтобы на странице отображалась только одна плитка.
             this.navigationHelper.GoBackCommand = new CRM.Common.RelayCommand(() => this.GoBack(), () => this.CanGoBack());
-            this.itemListView.SelectionChanged += itemListView_SelectionChanged;
+            this.meetingListView.SelectionChanged += itemListView_SelectionChanged;
 
             // Начало прослушивания изменений размера окна 
             // чтобы перейти от отображения двух панелей к отображению одной
@@ -177,7 +177,7 @@ namespace CRM
 
         private bool CanGoBack()
         {
-            if (this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null)
+            if (this.UsingLogicalPageNavigation() && this.meetingListView.SelectedItem != null)
             {
                 return true;
             }
@@ -188,13 +188,13 @@ namespace CRM
         }
         private void GoBack()
         {
-            if (this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null)
+            if (this.UsingLogicalPageNavigation() && this.meetingListView.SelectedItem != null)
             {
                 // Если действует логическая навигация по страницам и выделен элемент,
                 // сведения о котором в данный момент отображаются.  При очистке выделения снова отображается
                 // список элементов.  С точки зрения пользователя это логический переход назад
                 // назад.
-                this.itemListView.SelectedItem = null;
+                this.meetingListView.SelectedItem = null;
             }
             else
             {
@@ -222,7 +222,7 @@ namespace CRM
                 return "PrimaryView";
 
             // Обновить включенное состояние кнопки "Назад" при изменении состояния представления
-            var logicalPageBack = this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null;
+            var logicalPageBack = this.UsingLogicalPageNavigation() && this.meetingListView.SelectedItem != null;
 
             return logicalPageBack ? "SinglePane_Detail" : "SinglePane";
         }
