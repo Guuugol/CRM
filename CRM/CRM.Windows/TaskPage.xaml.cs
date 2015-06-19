@@ -24,7 +24,7 @@ namespace CRM
     /// Страница, на которой отображается заголовок группы, список элементов этой группы и сведения о
     /// выбранном в данный момент элементе.
     /// </summary>
-    public sealed partial class MeetingPage : Page
+    public sealed partial class TaskPage : Page
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
@@ -46,7 +46,7 @@ namespace CRM
             get { return this.navigationHelper; }
         }
 
-        public MeetingPage()
+        public TaskPage()
         {
             this.InitializeComponent();
 
@@ -58,7 +58,7 @@ namespace CRM
             // Настройка логических компонентов навигации по страницам, позволяющих
             // чтобы на странице отображалась только одна плитка.
             this.navigationHelper.GoBackCommand = new CRM.Common.RelayCommand(() => this.GoBack(), () => this.CanGoBack());
-            this.meetingListView.SelectionChanged += itemListView_SelectionChanged;
+            this.itemListView.SelectionChanged += itemListView_SelectionChanged;
 
             // Начало прослушивания изменений размера окна 
             // чтобы перейти от отображения двух панелей к отображению одной
@@ -177,7 +177,7 @@ namespace CRM
 
         private bool CanGoBack()
         {
-            if (this.UsingLogicalPageNavigation() && this.meetingListView.SelectedItem != null)
+            if (this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null)
             {
                 return true;
             }
@@ -188,13 +188,13 @@ namespace CRM
         }
         private void GoBack()
         {
-            if (this.UsingLogicalPageNavigation() && this.meetingListView.SelectedItem != null)
+            if (this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null)
             {
                 // Если действует логическая навигация по страницам и выделен элемент,
                 // сведения о котором в данный момент отображаются.  При очистке выделения снова отображается
                 // список элементов.  С точки зрения пользователя это логический переход назад
                 // назад.
-                this.meetingListView.SelectedItem = null;
+                this.itemListView.SelectedItem = null;
             }
             else
             {
@@ -222,7 +222,7 @@ namespace CRM
                 return "PrimaryView";
 
             // Обновить включенное состояние кнопки "Назад" при изменении состояния представления
-            var logicalPageBack = this.UsingLogicalPageNavigation() && this.meetingListView.SelectedItem != null;
+            var logicalPageBack = this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null;
 
             return logicalPageBack ? "SinglePane_Detail" : "SinglePane";
         }
@@ -252,9 +252,9 @@ namespace CRM
 
         #endregion
 
-        private void btnToTasks_Click(object sender, RoutedEventArgs e)
+        private void btnToMeetings_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(TaskPage));
+            Frame.Navigate(typeof(MeetingPage));
         }
 
         private void btnToContacts_Click(object sender, RoutedEventArgs e)

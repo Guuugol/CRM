@@ -65,6 +65,27 @@ namespace CRM
 
         }
 
+
+        private void btnToTasks_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(TaskPage));
+        }
+
+        private void btnToMeetings_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MeetingPage));
+        }
+
+        private void btnToCustomers_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof (CustomerPage));
+        }
+
+        private void btnReLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof (FirstPage));
+        }
+
     }
 }
     

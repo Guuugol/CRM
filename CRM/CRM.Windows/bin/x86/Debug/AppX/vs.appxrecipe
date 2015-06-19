@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-06-15T15:41:16.770</Modified>
+      <Modified>2015-06-19T09:15:33.447</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\CRM.Windows.exe">
       <PackagePath>CRM.Windows.exe</PackagePath>
-      <Modified>2015-06-15T19:35:53.385</Modified>
+      <Modified>2015-06-19T09:15:27.040</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\References\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI.winmd">
       <PackagePath>Microsoft.Advertising.WinRT.UI.winmd</PackagePath>
@@ -226,7 +226,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\ContactPage.xbf">
       <PackagePath>ContactPage.xbf</PackagePath>
-      <Modified>2015-06-15T19:35:52.220</Modified>
+      <Modified>2015-06-19T09:15:26.008</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\CustomerPage.xbf">
+      <PackagePath>CustomerPage.xbf</PackagePath>
+      <Modified>2015-06-19T09:15:26.009</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\FirstPage.xbf">
       <PackagePath>FirstPage.xbf</PackagePath>
@@ -234,15 +238,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\MeetingPage.xbf">
       <PackagePath>MeetingPage.xbf</PackagePath>
-      <Modified>2015-06-15T19:35:52.221</Modified>
+      <Modified>2015-06-19T09:15:26.010</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\TaskPage.xbf">
+      <PackagePath>TaskPage.xbf</PackagePath>
+      <Modified>2015-06-19T09:15:26.010</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\CRM.Windows.xr.xml">
       <PackagePath>CRM.Windows.xr.xml</PackagePath>
-      <Modified>2015-06-15T19:35:52.093</Modified>
+      <Modified>2015-06-19T09:15:25.900</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-06-15T15:41:11.391</Modified>
+      <Modified>2015-06-19T09:15:27.595</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

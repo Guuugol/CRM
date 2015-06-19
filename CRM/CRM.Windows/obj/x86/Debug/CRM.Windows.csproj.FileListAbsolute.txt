@@ -435,7 +435,13 @@ C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\qualifi
 C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\Common\StandardStyles.g.i.cs
-C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\Common\StandardStyles.g.cs
-C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\Common\StandardStyles.xaml
-C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\Common\StandardStyles.xbf
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\CustomerPage.xbf
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\TaskPage.xbf
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\CustomerPage.g.i.cs
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\CustomerPage.g.cs
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\TaskPage.g.i.cs
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\TaskPage.g.cs
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\CustomerPage.xaml
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\TaskPage.xaml
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\CustomerPage.xbf
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\TaskPage.xbf

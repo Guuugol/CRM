@@ -43,13 +43,7 @@
                 <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
-                        Style="{StaticResource NavigationBackButtonNormalStyle}"
-                        VerticalAlignment="Top"
-                        AutomationProperties.Name="Back"
-                        AutomationProperties.AutomationId="BackButton"
-                        AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+            <TextBlock x:Name="tbMeetings" Text="Meetings" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,0,40"/>
         </Grid>
 
@@ -178,5 +172,21 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
     </Grid>
+    <Page.TopAppBar>
+        <AppBar x:Name="abNavigation" Padding="10,0,10,0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,404,0">
+                    <Button x:ConnectionId='2' Name="btnToContacts"  Content="To Contacts" Height="44" Margin="0,23,0,-3" Width="230"                             />
+                    <Button x:ConnectionId='3' Name="btnToTasks"  Content="To Tasks"  Height="44" Margin="0,23,0,-3" Width="230"                          />
+                    <Button x:ConnectionId='4' Name="btnToCustomers" Content="To Customers" Height="44" Margin="0,23,0,-3" Width="230"                              />
+                    <Button x:ConnectionId='5' Name="btnReLogin" Content="Change Login" Height="44" Margin="0,23,0,-3" Width="230"                          />
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
 </Page>
 

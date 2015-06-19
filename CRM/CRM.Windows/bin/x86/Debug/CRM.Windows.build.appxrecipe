@@ -170,11 +170,17 @@
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\ContactPage.xbf">
       <PackagePath>ContactPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\CustomerPage.xbf">
+      <PackagePath>CustomerPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\FirstPage.xbf">
       <PackagePath>FirstPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\MeetingPage.xbf">
       <PackagePath>MeetingPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\TaskPage.xbf">
+      <PackagePath>TaskPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\CRM.Windows.xr.xml">
       <PackagePath>CRM.Windows.xr.xml</PackagePath>

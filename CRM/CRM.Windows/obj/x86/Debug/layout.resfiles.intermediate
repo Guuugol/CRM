@@ -5,8 +5,10 @@ Assets\StoreLogo.scale-100.png
 App.xbf
 ContactPage.xbf
 CRM.Windows.xr.xml
+CustomerPage.xbf
 FirstPage.xbf
 MeetingPage.xbf
+TaskPage.xbf
 Telerik.Core\App.xbf
 Telerik.UI.Xaml.Chart\App.xbf
 Telerik.UI.Xaml.Chart\Themes\Generic.xbf
