@@ -90,6 +90,66 @@ namespace CRM.ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CustomerData", Namespace="http://schemas.datacontract.org/2004/07/DataBaseWCF")]
+    public partial class CustomerData : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string ContactNameField;
+        
+        private string ContactSurnameField;
+        
+        private string NameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ContactName {
+            get {
+                return this.ContactNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContactNameField, value) != true)) {
+                    this.ContactNameField = value;
+                    this.RaisePropertyChanged("ContactName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ContactSurname {
+            get {
+                return this.ContactSurnameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContactSurnameField, value) != true)) {
+                    this.ContactSurnameField = value;
+                    this.RaisePropertyChanged("ContactSurname");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IDataService")]
     public interface IDataService {
@@ -102,6 +162,9 @@ namespace CRM.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetLoginData", ReplyAction="http://tempuri.org/IDataService/GetLoginDataResponse")]
         System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetLoginDataAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetCustomerData", ReplyAction="http://tempuri.org/IDataService/GetCustomerDataResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.CustomerData>> GetCustomerDataAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -157,6 +220,10 @@ namespace CRM.ServiceReference {
         
         public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<string>> GetLoginDataAsync() {
             return base.Channel.GetLoginDataAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.CustomerData>> GetCustomerDataAsync() {
+            return base.Channel.GetCustomerDataAsync();
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync() {

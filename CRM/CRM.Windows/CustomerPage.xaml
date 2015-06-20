@@ -1,18 +1,13 @@
 ﻿<Page
-    x:Class="CRM.CustomerPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:CRM"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Grid="using:Telerik.UI.Xaml.Controls.Grid"
+    x:Class="CRM.CustomerPage"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-        <TextBlock x:Name="tbTitle" Text="Customers" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="39,41,1055,0" Height="74"/>
-
-    </Grid>
     <Page.TopAppBar>
         <AppBar x:Name="abNavigation" Padding="10,0,10,0">
             <Grid>
@@ -21,12 +16,21 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,404,0">
-                    <Button Name="btnToMeetings"  Content="To Meetings" Height="44" Margin="0,23,0,-3" Width="230" Click="btnToMeetings_Click"/>
-                    <Button Name="btnToTasks"  Content="To Tasks"  Height="44" Margin="0,23,0,-3" Width="230" Click="btnToTasks_Click" />
-                    <Button Name="btnToContacts" Content="To Contacts" Height="44" Margin="0,23,0,-3" Width="230" Click="btnToContacts_Click" />
-                    <Button Name="btnReLogin" Content="Change Login" Height="44" Margin="0,23,0,-3" Width="230" Click="btnReLogin_Click" />
+                    <Button x:Name="btnToMeetings"  Content="To Meetings" Height="44" Margin="0,23,0,-3" Width="230" Click="btnToMeetings_Click"/>
+                    <Button x:Name="btnToTasks"  Content="To Tasks"  Height="44" Margin="0,23,0,-3" Width="230" Click="btnToTasks_Click" />
+                    <Button x:Name="btnToContacts" Content="To Contacts" Height="44" Margin="0,23,0,-3" Width="230" Click="btnToContacts_Click" />
+                    <Button x:Name="btnReLogin" Content="Change Login" Height="44" Margin="0,23,0,-3" Width="230" Click="btnReLogin_Click" />
                 </StackPanel>
             </Grid>
         </AppBar>
     </Page.TopAppBar>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <TextBlock x:Name="tbTitle" Text="Customers" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+			IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="39,41,1055,0" Height="74"/>
+
+        <Grid:RadDataGrid x:Name="grdCustomer" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top" Width="1366" Height="648"/>
+
+    </Grid>
 </Page>

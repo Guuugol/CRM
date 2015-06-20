@@ -25,6 +25,8 @@ namespace CRM
         public CustomerPage()
         {
             this.InitializeComponent();
+
+            CallServiceMethod();
         }
 
         private void btnToMeetings_Click(object sender, RoutedEventArgs e)
@@ -45,6 +47,29 @@ namespace CRM
         private void btnReLogin_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(FirstPage));
+        }
+
+        public async void CallServiceMethod()
+        {
+            var cl = new ServiceReference.DataServiceClient();
+
+            var results = await cl.GetCustomerDataAsync();
+            var result = results;
+            if (result != null)
+            {
+                grdCustomer.ItemsSource = result;
+            }
+
+        }
+
+        public class CustomerData
+        {
+            public string Name { get; set; }
+
+            public string ContactName { get; set; }
+
+            public string ContactSurname { get; set; }
+
         }
     }
 }

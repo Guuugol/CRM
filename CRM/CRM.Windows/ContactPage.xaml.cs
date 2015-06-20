@@ -42,8 +42,8 @@ namespace CRM
         {
             var cl = new ServiceReference.DataServiceClient();
 
-            var results = await cl.GetTestListAsync();  //new GetTestListRequest(){}
-            var result = results; //.GetTestListResult
+            var results = await cl.GetTestListAsync();  
+            var result = results; 
             if (result != null)
             {
                 grdContact.ItemsSource = result;

@@ -15,4 +15,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DataType" nillable="true" type="tns:DataType" />
+  <xs:complexType name="ArrayOfCustomerData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerData" nillable="true" type="tns:CustomerData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerData" nillable="true" type="tns:ArrayOfCustomerData" />
+  <xs:complexType name="CustomerData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactSurname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerData" nillable="true" type="tns:CustomerData" />
 </xs:schema>

@@ -139,6 +139,9 @@
     </AppxManifest>
     <None Include="CRM.Windows_TemporaryKey.pfx" />
     <None Include="Properties\ServiceReferences.Designer.ClientConfig" />
+    <None Include="Service References\ServiceReference\CRM.ServiceReference.CustomerData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference\CRM.ServiceReference.DataType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

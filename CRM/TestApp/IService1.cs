@@ -24,6 +24,9 @@ namespace DataBaseWCF
         [OperationContract]
         List<string> GetLoginData();
 
+        [OperationContract]
+        List<CustomerData> GetCustomerData();
+
     }
 
     public class DataType
@@ -40,5 +43,15 @@ namespace DataBaseWCF
     public class LoginData
     {
         public string Name { get; set; }
+    }
+
+    public class CustomerData
+    {
+        public string Name { get; set; }
+        
+        public string  ContactName { get; set; }
+
+        public string ContactSurname { get; set; }
+
     }
 }

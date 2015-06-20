@@ -19,7 +19,7 @@
         <TextBlock x:Name="tbTitle" Text="Contacts" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="39,41,1055,0" Height="74"/>
 
-        <Grid:RadDataGrid x:Name="grdContact" HorizontalAlignment="Left" VerticalAlignment="Top" Height="623" Width="1373" Grid.ColumnSpan="2" Margin="0,145,0,0" BorderBrush="#FF1D1D1D" />
+        <Grid:RadDataGrid x:Name="grdContact" HorizontalAlignment="Left" Margin="0,120,-3,0" VerticalAlignment="Top" Width="1366" Height="648" Grid.ColumnSpan="2"/>
     </Grid>
     <Page.TopAppBar>
         <AppBar x:Name="abNavigation" Padding="10,0,10,0">
