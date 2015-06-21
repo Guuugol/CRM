@@ -57,13 +57,28 @@ namespace CRM
 
             // Настройка логических компонентов навигации по страницам, позволяющих
             // чтобы на странице отображалась только одна плитка.
-            this.navigationHelper.GoBackCommand = new CRM.Common.RelayCommand(() => this.GoBack(), () => this.CanGoBack());
-            this.itemListView.SelectionChanged += itemListView_SelectionChanged;
+            //this.navigationHelper.GoBackCommand = new CRM.Common.RelayCommand(() => this.GoBack(), () => this.CanGoBack());
+            //this.itemListView.SelectionChanged += itemListView_SelectionChanged;
 
             // Начало прослушивания изменений размера окна 
             // чтобы перейти от отображения двух панелей к отображению одной
             Window.Current.SizeChanged += Window_SizeChanged;
-            this.InvalidateVisualState();
+            //this.InvalidateVisualState();
+
+            CallGetShortTaskData();
+        }
+
+        public async void CallGetShortTaskData()
+        {
+            var cl = new ServiceReference.DataServiceClient();
+
+            var results = await cl.GetShortTaskDataAsync();
+            var result = results;
+            if (result != null)
+            {
+                grdTask.ItemsSource = result;
+            }
+
         }
 
         void itemListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -157,7 +172,7 @@ namespace CRM
         /// <param name="e">Данные о событии, описывающие новый размер окна</param>
         private void Window_SizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e)
         {
-            this.InvalidateVisualState();
+            //this.InvalidateVisualState();
         }
 
         /// <summary>
@@ -172,9 +187,9 @@ namespace CRM
             // элемент выделен, это приводит к переходу от отображения списка элементов к
             // отображению сведений о выделенном элементе.  Когда выделение очищается, это приводит к
             // обратному эффекту.
-            if (this.UsingLogicalPageNavigation()) this.InvalidateVisualState();
+            //if (this.UsingLogicalPageNavigation()) this.InvalidateVisualState();
         }
-
+        /*
         private bool CanGoBack()
         {
             if (this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null)
@@ -185,30 +200,16 @@ namespace CRM
             {
                 return this.navigationHelper.CanGoBack();
             }
-        }
-        private void GoBack()
-        {
-            if (this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null)
-            {
-                // Если действует логическая навигация по страницам и выделен элемент,
-                // сведения о котором в данный момент отображаются.  При очистке выделения снова отображается
-                // список элементов.  С точки зрения пользователя это логический переход назад
-                // назад.
-                this.itemListView.SelectedItem = null;
-            }
-            else
-            {
-                this.navigationHelper.GoBack();
-            }
-        }
-
+        }*/
+        
+/*
         private void InvalidateVisualState()
         {
             var visualState = DetermineVisualState();
             VisualStateManager.GoToState(this, visualState, false);
             this.navigationHelper.GoBackCommand.RaiseCanExecuteChanged();
         }
-
+        */
         /// <summary>
         /// Вызывается, чтобы определить имя состояния отображения, соответствующее состоянию
         /// отображения приложения.
@@ -216,16 +217,17 @@ namespace CRM
         /// <returns>Имя требуемого состояния отображения.  Это имя совпадает с именем состояния
         /// отображения, кроме случаев, когда есть выделенный элемент в книжном или прикрепленном представлении, где
         /// эта дополнительная логическая страница представляется добавлением суффикса _Detail.</returns>
+        /*
         private string DetermineVisualState()
         {
             if (!UsingLogicalPageNavigation())
                 return "PrimaryView";
 
             // Обновить включенное состояние кнопки "Назад" при изменении состояния представления
-            var logicalPageBack = this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null;
+            //var logicalPageBack = this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null;
 
             return logicalPageBack ? "SinglePane_Detail" : "SinglePane";
-        }
+        }*/
 
         #endregion
 
@@ -271,5 +273,14 @@ namespace CRM
         {
             Frame.Navigate(typeof(FirstPage));
         }
+    }
+
+
+    public class ShortTaskData
+    {
+        public string CustomerName { get; set; }
+
+        public string TaskType { get; set; }
+
     }
 }

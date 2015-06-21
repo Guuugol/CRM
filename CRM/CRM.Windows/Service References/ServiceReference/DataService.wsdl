@@ -32,6 +32,18 @@
   <wsdl:message name="IDataService_GetCustomerData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCustomerDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IDataService_GetShortMeetingData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShortMeetingData" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetShortMeetingData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShortMeetingDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetShortTaskData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShortTaskData" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetShortTaskData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShortTaskDataResponse" />
+  </wsdl:message>
   <wsdl:portType name="IDataService">
     <wsdl:operation name="GetTestList">
       <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetTestList" message="tns:IDataService_GetTestList_InputMessage" />
@@ -48,6 +60,14 @@
     <wsdl:operation name="GetCustomerData">
       <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetCustomerData" message="tns:IDataService_GetCustomerData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetCustomerDataResponse" message="tns:IDataService_GetCustomerData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShortMeetingData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetShortMeetingData" message="tns:IDataService_GetShortMeetingData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetShortMeetingDataResponse" message="tns:IDataService_GetShortMeetingData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShortTaskData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetShortTaskData" message="tns:IDataService_GetShortTaskData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetShortTaskDataResponse" message="tns:IDataService_GetShortTaskData_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IDataService" type="tns:IDataService">
@@ -81,6 +101,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetCustomerData">
       <soap:operation soapAction="http://tempuri.org/IDataService/GetCustomerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShortMeetingData">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetShortMeetingData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShortTaskData">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetShortTaskData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

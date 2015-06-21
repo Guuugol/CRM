@@ -150,6 +150,96 @@ namespace CRM.ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ShortMeetingData", Namespace="http://schemas.datacontract.org/2004/07/DataBaseWCF")]
+    public partial class ShortMeetingData : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string CustomerNameField;
+        
+        private System.DateTime DateField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ShortTaskData", Namespace="http://schemas.datacontract.org/2004/07/DataBaseWCF")]
+    public partial class ShortTaskData : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string CustomerNameField;
+        
+        private string TaskTypeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TaskType {
+            get {
+                return this.TaskTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TaskTypeField, value) != true)) {
+                    this.TaskTypeField = value;
+                    this.RaisePropertyChanged("TaskType");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IDataService")]
     public interface IDataService {
@@ -165,6 +255,12 @@ namespace CRM.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetCustomerData", ReplyAction="http://tempuri.org/IDataService/GetCustomerDataResponse")]
         System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.CustomerData>> GetCustomerDataAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetShortMeetingData", ReplyAction="http://tempuri.org/IDataService/GetShortMeetingDataResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.ShortMeetingData>> GetShortMeetingDataAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetShortTaskData", ReplyAction="http://tempuri.org/IDataService/GetShortTaskDataResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.ShortTaskData>> GetShortTaskDataAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -224,6 +320,14 @@ namespace CRM.ServiceReference {
         
         public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.CustomerData>> GetCustomerDataAsync() {
             return base.Channel.GetCustomerDataAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.ShortMeetingData>> GetShortMeetingDataAsync() {
+            return base.Channel.GetShortMeetingDataAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.ShortTaskData>> GetShortTaskDataAsync() {
+            return base.Channel.GetShortTaskDataAsync();
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync() {

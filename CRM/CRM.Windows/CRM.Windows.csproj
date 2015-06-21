@@ -145,6 +145,12 @@
     <None Include="Service References\ServiceReference\CRM.ServiceReference.DataType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\ServiceReference\CRM.ServiceReference.ShortMeetingData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference\CRM.ServiceReference.ShortTaskData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference\DataService.wsdl" />
     <None Include="Service References\ServiceReference\DataWCF.xsd">
       <SubType>Designer</SubType>

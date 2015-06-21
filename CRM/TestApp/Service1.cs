@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Common.CommandTrees;
 using System.Linq;
+using System.Net.Sockets;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -111,6 +112,53 @@ namespace DataBaseWCF
             }
         }
 
+        public List<ShortMeetingData> GetShortMeetingData()
+        {   
+            Console.WriteLine("Method: GetShortMeetingData");
+            Console.WriteLine("Method: GetShortMeetingData");
+            using (var db = new CRMEntities())
+            {
+                var query = from m in db.tbl_Meeting
+                    join c in db.tbl_Customer on m.CustomerID equals c.ID
+                    select new {c.Name, m.Date};
+                var dataList = new List<ShortMeetingData>();
+                foreach (var q in query)
+                {
+                    var cust = new ShortMeetingData() 
+                    {
+                        CustomerName  = q.Name,
+                        Date  = q.Date 
+                    };
+                    dataList.Add(cust);
+                }
+                return dataList;
+            }
+        }
+
+        public List<ShortTaskData> GetShortTaskData()
+        {
+            Console.WriteLine("Method: GetShortTaskData");
+            Console.WriteLine("Method: GetShortTaskData");
+            using (var db = new CRMEntities())
+            {
+                var query = from t in db.tbl_Task
+                            join c in db.tbl_Customer on t.CustomerID equals c.ID
+                            join tt in db.tbl_TaskType on t.TaskTypeID equals tt.ID
+                            let typeName = tt.Name 
+                            select new { c.Name, typeName };
+                var dataList = new List<ShortTaskData>();
+                foreach (var q in query)
+                {
+                    var cust = new ShortTaskData()
+                    {
+                        CustomerName = q.Name,
+                        TaskType = q.typeName
+                    };
+                    dataList.Add(cust);
+                }
+                return dataList;
+            }
+        }
     }
 }
  

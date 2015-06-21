@@ -47,7 +47,7 @@ namespace CRM
 
                 if (!results.Contains(login))
                 {
-                    System.Exception ex = new Exception();
+                    var ex = new Exception();
                     throw ex;
                 }
             }
@@ -61,7 +61,6 @@ namespace CRM
                 // throw;
             }
                 
-            var contactPage = new ContactPage();
             Frame.Navigate(typeof(ContactPage));
             return;
 

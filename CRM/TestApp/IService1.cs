@@ -3,6 +3,7 @@ using System.Runtime.Serialization;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
@@ -26,6 +27,13 @@ namespace DataBaseWCF
 
         [OperationContract]
         List<CustomerData> GetCustomerData();
+
+        [OperationContract]
+        List<ShortMeetingData> GetShortMeetingData();
+
+        [OperationContract]
+        List<ShortTaskData> GetShortTaskData();
+
 
     }
 
@@ -52,6 +60,34 @@ namespace DataBaseWCF
         public string  ContactName { get; set; }
 
         public string ContactSurname { get; set; }
+
+    }
+
+    public class ShortMeetingData
+    {
+        public string CustomerName { get; set; }
+
+        public DateTime Date { get; set; }
+    }
+
+    public class FullMeetingData
+    {
+        public string CustomerName { get; set; }
+
+        public DateTime Date { get; set; }
+
+        public string Owner { get; set; }
+
+        public string Goal { get; set; }
+
+        public string Result { get; set; }
+    }
+
+    public class ShortTaskData
+    {
+        public string CustomerName { get; set; }
+
+        public string TaskType { get; set; }
 
     }
 }

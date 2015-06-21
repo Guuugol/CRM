@@ -51,4 +51,28 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetShortMeetingData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortMeetingDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DataBaseWCF" minOccurs="0" name="GetShortMeetingDataResult" nillable="true" type="q4:ArrayOfShortMeetingData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTaskData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShortTaskDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DataBaseWCF" minOccurs="0" name="GetShortTaskDataResult" nillable="true" type="q5:ArrayOfShortTaskData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

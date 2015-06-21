@@ -26,15 +26,15 @@ namespace CRM
     /// </summary>
     public sealed partial class MeetingPage : Page
     {
-        private NavigationHelper navigationHelper;
-        private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private readonly NavigationHelper _navigationHelper;
+        private readonly ObservableDictionary _defaultViewModel = new ObservableDictionary();
 
         /// <summary>
         /// Эту настройку можно изменить на модель строго типизированных представлений.
         /// </summary>
         public ObservableDictionary DefaultViewModel
         {
-            get { return this.defaultViewModel; }
+            get { return this._defaultViewModel; }
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace CRM
         /// </summary>
         public NavigationHelper NavigationHelper
         {
-            get { return this.navigationHelper; }
+            get { return this._navigationHelper; }
         }
 
         public MeetingPage()
@@ -51,26 +51,41 @@ namespace CRM
             this.InitializeComponent();
 
             // Настройка вспомогательного приложения навигации
-            this.navigationHelper = new NavigationHelper(this);
-            this.navigationHelper.LoadState += navigationHelper_LoadState;
-            this.navigationHelper.SaveState += navigationHelper_SaveState;
+            this._navigationHelper = new NavigationHelper(this);
+            this._navigationHelper.LoadState += navigationHelper_LoadState;
+            this._navigationHelper.SaveState += navigationHelper_SaveState;
 
             // Настройка логических компонентов навигации по страницам, позволяющих
             // чтобы на странице отображалась только одна плитка.
-            this.navigationHelper.GoBackCommand = new CRM.Common.RelayCommand(() => this.GoBack(), () => this.CanGoBack());
-            this.meetingListView.SelectionChanged += itemListView_SelectionChanged;
+            //this._navigationHelper.GoBackCommand = new CRM.Common.RelayCommand(() => this.GoBack(), () => this.CanGoBack());
+            //this.LwMeeting.SelectionChanged += itemListView_SelectionChanged;
 
             // Начало прослушивания изменений размера окна 
             // чтобы перейти от отображения двух панелей к отображению одной
-            Window.Current.SizeChanged += Window_SizeChanged;
-            this.InvalidateVisualState();
+            //Window.Current.SizeChanged += Window_SizeChanged;
+            //this.InvalidateVisualState();
+
+            CallServiceMethod();
+
         }
 
+        public async void CallServiceMethod()
+        {
+            var cl = new ServiceReference.DataServiceClient();
+
+            var results = await cl.GetShortMeetingDataAsync();
+            var result = results;
+            if (result != null)
+            {
+                grdMeeting.ItemsSource = result;
+            }
+
+        }
         void itemListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (this.UsingLogicalPageNavigation())
             {
-                this.navigationHelper.GoBackCommand.RaiseCanExecuteChanged();
+                this._navigationHelper.GoBackCommand.RaiseCanExecuteChanged();
             }
         }
 
@@ -150,64 +165,7 @@ namespace CRM
             return Window.Current.Bounds.Width < MinimumWidthForSupportingTwoPanes;
         }
 
-        /// <summary>
-        /// Вызывается при изменении размера окна
-        /// </summary>
-        /// <param name="sender">Текущее окно</param>
-        /// <param name="e">Данные о событии, описывающие новый размер окна</param>
-        private void Window_SizeChanged(object sender, Windows.UI.Core.WindowSizeChangedEventArgs e)
-        {
-            this.InvalidateVisualState();
-        }
-
-        /// <summary>
-        /// Вызывается при выделении элемента списка.
-        /// </summary>
-        /// <param name="sender">Представление сетки, в котором отображается выделенный элемент.</param>
-        /// <param name="e">Данные о событии, описывающие, каким образом изменилось выделение.</param>
-        private void ItemListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            // Аннулировать состояние представления, когда действует логическая навигация по страницам, поскольку изменение
-            // выделения может вызвать соответствующее изменение в текущей логической странице.  Если
-            // элемент выделен, это приводит к переходу от отображения списка элементов к
-            // отображению сведений о выделенном элементе.  Когда выделение очищается, это приводит к
-            // обратному эффекту.
-            if (this.UsingLogicalPageNavigation()) this.InvalidateVisualState();
-        }
-
-        private bool CanGoBack()
-        {
-            if (this.UsingLogicalPageNavigation() && this.meetingListView.SelectedItem != null)
-            {
-                return true;
-            }
-            else
-            {
-                return this.navigationHelper.CanGoBack();
-            }
-        }
-        private void GoBack()
-        {
-            if (this.UsingLogicalPageNavigation() && this.meetingListView.SelectedItem != null)
-            {
-                // Если действует логическая навигация по страницам и выделен элемент,
-                // сведения о котором в данный момент отображаются.  При очистке выделения снова отображается
-                // список элементов.  С точки зрения пользователя это логический переход назад
-                // назад.
-                this.meetingListView.SelectedItem = null;
-            }
-            else
-            {
-                this.navigationHelper.GoBack();
-            }
-        }
-
-        private void InvalidateVisualState()
-        {
-            var visualState = DetermineVisualState();
-            VisualStateManager.GoToState(this, visualState, false);
-            this.navigationHelper.GoBackCommand.RaiseCanExecuteChanged();
-        }
+     
 
         /// <summary>
         /// Вызывается, чтобы определить имя состояния отображения, соответствующее состоянию
@@ -216,16 +174,7 @@ namespace CRM
         /// <returns>Имя требуемого состояния отображения.  Это имя совпадает с именем состояния
         /// отображения, кроме случаев, когда есть выделенный элемент в книжном или прикрепленном представлении, где
         /// эта дополнительная логическая страница представляется добавлением суффикса _Detail.</returns>
-        private string DetermineVisualState()
-        {
-            if (!UsingLogicalPageNavigation())
-                return "PrimaryView";
-
-            // Обновить включенное состояние кнопки "Назад" при изменении состояния представления
-            var logicalPageBack = this.UsingLogicalPageNavigation() && this.meetingListView.SelectedItem != null;
-
-            return logicalPageBack ? "SinglePane_Detail" : "SinglePane";
-        }
+        
 
         #endregion
 
@@ -242,12 +191,12 @@ namespace CRM
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            navigationHelper.OnNavigatedTo(e);
+            _navigationHelper.OnNavigatedTo(e);
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            navigationHelper.OnNavigatedFrom(e);
+            _navigationHelper.OnNavigatedFrom(e);
         }
 
         #endregion
@@ -271,5 +220,25 @@ namespace CRM
         {
             Frame.Navigate(typeof(FirstPage));
         }
+    }
+
+    public class ShortMeetingData
+    {
+        public string CustomerName { get; set; }
+
+        public DateTime Date { get; set; }
+    }
+
+    public class FullMeetingData
+    {
+        public string CustomerName { get; set; }
+
+        public DateTime Date { get; set; }
+
+        public string Owner { get; set; }
+
+        public string Goal { get; set; }
+
+        public string Result { get; set; }
     }
 }

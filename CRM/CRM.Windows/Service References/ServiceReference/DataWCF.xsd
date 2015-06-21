@@ -29,4 +29,30 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CustomerData" nillable="true" type="tns:CustomerData" />
+  <xs:complexType name="ArrayOfShortMeetingData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShortMeetingData" nillable="true" type="tns:ShortMeetingData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShortMeetingData" nillable="true" type="tns:ArrayOfShortMeetingData" />
+  <xs:complexType name="ShortMeetingData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShortMeetingData" nillable="true" type="tns:ShortMeetingData" />
+  <xs:complexType name="ArrayOfShortTaskData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShortTaskData" nillable="true" type="tns:ShortTaskData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShortTaskData" nillable="true" type="tns:ArrayOfShortTaskData" />
+  <xs:complexType name="ShortTaskData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShortTaskData" nillable="true" type="tns:ShortTaskData" />
 </xs:schema>
