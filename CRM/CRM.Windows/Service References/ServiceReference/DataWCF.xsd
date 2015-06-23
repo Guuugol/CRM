@@ -55,4 +55,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ShortTaskData" nillable="true" type="tns:ShortTaskData" />
+  <xs:complexType name="ArrayOfFullMeetingData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FullMeetingData" nillable="true" type="tns:FullMeetingData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFullMeetingData" nillable="true" type="tns:ArrayOfFullMeetingData" />
+  <xs:complexType name="FullMeetingData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Goal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FullMeetingData" nillable="true" type="tns:FullMeetingData" />
 </xs:schema>

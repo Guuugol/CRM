@@ -75,4 +75,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetFullMeetingData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFullMeetingDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DataBaseWCF" minOccurs="0" name="GetFullMeetingDataResult" nillable="true" type="q6:ArrayOfFullMeetingData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

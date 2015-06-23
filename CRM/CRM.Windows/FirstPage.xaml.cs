@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.ServiceModel.Security;
 using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -43,7 +44,7 @@ namespace CRM
             try
             {
                 var results = await cl.GetLoginDataAsync();
-                
+
 
                 if (!results.Contains(login))
                 {
@@ -51,6 +52,7 @@ namespace CRM
                     throw ex;
                 }
             }
+
             catch (Exception ex)
             {
                 var dialog = new MessageDialog("Неверное имя пользователя");
@@ -60,6 +62,7 @@ namespace CRM
                 //tbLogin.Text = "";
                 // throw;
             }
+            
                 
             Frame.Navigate(typeof(ContactPage));
             return;

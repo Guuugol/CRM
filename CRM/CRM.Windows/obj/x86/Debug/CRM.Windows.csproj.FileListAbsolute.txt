@@ -445,3 +445,8 @@ C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\Custome
 C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\TaskPage.xaml
 C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\CustomerPage.xbf
 C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\TaskPage.xbf
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\PopupBehavior.xbf
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\PopupBehavior.g.i.cs
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\PopupBehavior.g.cs
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\PopupBehavior.xaml
+C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\obj\x86\Debug\PopupBehavior.xbf

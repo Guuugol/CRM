@@ -240,6 +240,96 @@ namespace CRM.ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="FullMeetingData", Namespace="http://schemas.datacontract.org/2004/07/DataBaseWCF")]
+    public partial class FullMeetingData : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string CustomerNameField;
+        
+        private System.DateTime DateField;
+        
+        private string GoalField;
+        
+        private string OwnerField;
+        
+        private string ResultField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CustomerName {
+            get {
+                return this.CustomerNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CustomerNameField, value) != true)) {
+                    this.CustomerNameField = value;
+                    this.RaisePropertyChanged("CustomerName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Goal {
+            get {
+                return this.GoalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GoalField, value) != true)) {
+                    this.GoalField = value;
+                    this.RaisePropertyChanged("Goal");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Owner {
+            get {
+                return this.OwnerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OwnerField, value) != true)) {
+                    this.OwnerField = value;
+                    this.RaisePropertyChanged("Owner");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Result {
+            get {
+                return this.ResultField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ResultField, value) != true)) {
+                    this.ResultField = value;
+                    this.RaisePropertyChanged("Result");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IDataService")]
     public interface IDataService {
@@ -261,6 +351,9 @@ namespace CRM.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetShortTaskData", ReplyAction="http://tempuri.org/IDataService/GetShortTaskDataResponse")]
         System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.ShortTaskData>> GetShortTaskDataAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDataService/GetFullMeetingData", ReplyAction="http://tempuri.org/IDataService/GetFullMeetingDataResponse")]
+        System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.FullMeetingData>> GetFullMeetingDataAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -328,6 +421,10 @@ namespace CRM.ServiceReference {
         
         public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.ShortTaskData>> GetShortTaskDataAsync() {
             return base.Channel.GetShortTaskDataAsync();
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.ObjectModel.ObservableCollection<CRM.ServiceReference.FullMeetingData>> GetFullMeetingDataAsync() {
+            return base.Channel.GetFullMeetingDataAsync();
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync() {

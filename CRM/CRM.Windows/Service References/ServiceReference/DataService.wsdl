@@ -44,6 +44,12 @@
   <wsdl:message name="IDataService_GetShortTaskData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetShortTaskDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IDataService_GetFullMeetingData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullMeetingData" />
+  </wsdl:message>
+  <wsdl:message name="IDataService_GetFullMeetingData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFullMeetingDataResponse" />
+  </wsdl:message>
   <wsdl:portType name="IDataService">
     <wsdl:operation name="GetTestList">
       <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetTestList" message="tns:IDataService_GetTestList_InputMessage" />
@@ -68,6 +74,10 @@
     <wsdl:operation name="GetShortTaskData">
       <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetShortTaskData" message="tns:IDataService_GetShortTaskData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetShortTaskDataResponse" message="tns:IDataService_GetShortTaskData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullMeetingData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDataService/GetFullMeetingData" message="tns:IDataService_GetFullMeetingData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDataService/GetFullMeetingDataResponse" message="tns:IDataService_GetFullMeetingData_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IDataService" type="tns:IDataService">
@@ -119,6 +129,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetShortTaskData">
       <soap:operation soapAction="http://tempuri.org/IDataService/GetShortTaskData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullMeetingData">
+      <soap:operation soapAction="http://tempuri.org/IDataService/GetFullMeetingData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -159,6 +159,42 @@ namespace DataBaseWCF
                 return dataList;
             }
         }
+
+        public List<FullMeetingData> GetFullMeetingData()
+        {
+            Console.WriteLine("Method: GetFullMeetingData");
+            Console.WriteLine("Method: GetFullMeetingData");
+            using (var db = new CRMEntities())
+            {
+                var query = from m in db.tbl_Meeting
+                            join c in db.tbl_Customer on m.CustomerID equals c.ID
+                            join man in db.tbl_Manager on m.ManagerID equals man.ID 
+                            join con in db.tbl_Contact on man.ContactID equals con.ID 
+                            join res in db.tbl_MeetingResult on m.ResultID equals res.ID
+                            join g in db.tbl_MeetingGoal on m.GoalID equals g.ID 
+                            let contactName  = con.Name 
+                            let contactSurname = con.Surname 
+                            let result = res.Description 
+                            let goal = g.Description 
+                            select new { c.Name, m.Date , contactName ,contactSurname ,result ,goal  };
+                var dataList = new List<FullMeetingData>();
+                foreach (var q in query)
+                {
+                    var cust = new FullMeetingData()
+                    {
+                        // TODO??
+                        CustomerName = q.Name,
+                        Date = q.Date,
+                        Owner = q.contactName.ToString() +' '+ q.contactSurname.ToString(),
+                        Result = q.result,
+                        Goal = q.goal
+                        
+                    };
+                    dataList.Add(cust);
+                }
+                return dataList;
+            }
+        }
     }
 }
  

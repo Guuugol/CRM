@@ -94,9 +94,6 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="titlePanel" Storyboard.TargetProperty="(Grid.Column)">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemDetailGrid" Storyboard.TargetProperty="Margin">
-                            <DiscreteObjectKeyFrame KeyTime="0" Value="0,0,0,60"/>
-                        </ObjectAnimationUsingKeyFrames>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemDetail" Storyboard.TargetProperty="Padding">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="120,0,90,0"/>
                         </ObjectAnimationUsingKeyFrames>
@@ -116,33 +113,17 @@
 
         <!-- Сведения о выделенном элементе -->
         <ScrollViewer
-			x:Name="itemDetail"
+			x:Name="svItemDetail"
 			AutomationProperties.AutomationId="ItemDetailScrollViewer"
 			Grid.Column="1"
 			Grid.RowSpan="2"
 			Padding="60,0,66,0"
-			DataContext="{Binding SelectedItem, ElementName=LwMeeting}"
 			HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
 			ScrollViewer.HorizontalScrollMode="Disabled" ScrollViewer.VerticalScrollMode="Enabled"
 			ScrollViewer.ZoomMode="Disabled">
+            
 
-            <Grid x:Name="itemDetailGrid" Margin="0,60,0,50">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="291" Grid.RowSpan="3" VerticalAlignment="Top" Width="820">
-                    <TextBlock x:Name="tblCustomer" Height="68" Margin="467,0,0,0" FontSize="24" TextAlignment="Right" LineHeight="7"/>
-
-                </StackPanel>
-
-            </Grid>
         </ScrollViewer>
-        <Grid:RadDataGrid Name ="grdMeeting"  HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="628" Width="420"/>
+        <Grid:RadDataGrid Name ="grdMeeting"  HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="628" Width="420" SelectionChanged="grdMeeting_SelectionChanged" />
     </Grid>
 </Page>

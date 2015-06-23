@@ -8,6 +8,7 @@ CRM.Windows.xr.xml
 CustomerPage.xbf
 FirstPage.xbf
 MeetingPage.xbf
+PopupBehavior.xbf
 TaskPage.xbf
 Telerik.Core\App.xbf
 Telerik.UI.Xaml.Chart\App.xbf

@@ -34,7 +34,8 @@ namespace DataBaseWCF
         [OperationContract]
         List<ShortTaskData> GetShortTaskData();
 
-
+        [OperationContract]
+        List<FullMeetingData> GetFullMeetingData();
     }
 
     public class DataType

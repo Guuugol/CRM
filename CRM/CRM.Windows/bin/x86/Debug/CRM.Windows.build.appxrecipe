@@ -179,6 +179,9 @@
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\MeetingPage.xbf">
       <PackagePath>MeetingPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\PopupBehavior.xbf">
+      <PackagePath>PopupBehavior.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\SYShchipanov\Documents\GitHub\CRM\CRM\CRM.Windows\bin\x86\Debug\TaskPage.xbf">
       <PackagePath>TaskPage.xbf</PackagePath>
     </AppxPackagedFile>

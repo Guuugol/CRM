@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Grid="using:Telerik.UI.Xaml.Controls.Grid"
+    xmlns:popups="using:Windows.UI.Popups"
     x:Class="CRM.CustomerPage"
     mc:Ignorable="d">
 
@@ -29,9 +30,9 @@
 
         <TextBlock x:Name="tbTitle" Text="Customers" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
 			IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top" Margin="39,41,1055,0" Height="74"/>
-
-        <Grid:RadDataGrid x:Name="grdCustomer" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top" Width="1366" Height="648"/>
-
+        <Grid:RadDataGrid x:ConnectionId='5' x:Name="grdCustomer" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top" Width="1366" Height="648"                                                      >
+            
+        </Grid:RadDataGrid>
     </Grid>
 </Page>
 

@@ -46,6 +46,8 @@ namespace CRM
             get { return this._navigationHelper; }
         }
 
+        public List<FullMeetingData> FullData;
+ 
         public MeetingPage()
         {
             this.InitializeComponent();
@@ -66,6 +68,7 @@ namespace CRM
             //this.InvalidateVisualState();
 
             CallServiceMethod();
+            
 
         }
 
@@ -73,17 +76,32 @@ namespace CRM
         {
             var cl = new ServiceReference.DataServiceClient();
 
-            var results = await cl.GetShortMeetingDataAsync();
+            var results = await cl.GetFullMeetingDataAsync();
             var result = results;
             if (result != null)
             {
-                grdMeeting.ItemsSource = result;
+                var shortDataList = result.Select(r => new ShortMeetingData()
+                {
+                    CustomerName = r.CustomerName, Date = r.Date
+                }).ToList();
+                grdMeeting.ItemsSource = shortDataList;
+
+                var fullDataList = result.Select(r => new FullMeetingData()
+                {
+                    CustomerName = r.CustomerName,
+                    Date = r.Date,
+                    Owner = r.Owner,
+                    Goal = r.Goal,
+                    Result = r.Result
+                }).ToList();
+                grdMeeting.ItemsSource = shortDataList;
+                FullData = fullDataList;
             }
 
         }
         void itemListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (this.UsingLogicalPageNavigation())
+            if (UsingLogicalPageNavigation())
             {
                 this._navigationHelper.GoBackCommand.RaiseCanExecuteChanged();
             }
@@ -109,7 +127,7 @@ namespace CRM
             {
                 // Если это новая страница, первый элемент выбирается автоматически, если не действует логическая
                 // навигация по страницам (см. ниже область #region логической навигации по страницам).
-                if (!this.UsingLogicalPageNavigation() && this.itemsViewSource.View != null)
+                if (!UsingLogicalPageNavigation() && this.itemsViewSource.View != null)
                 {
                     this.itemsViewSource.View.MoveCurrentToFirst();
                 }
@@ -160,7 +178,7 @@ namespace CRM
         /// </summary>
         /// <returns>Значение True, если окно должно вести себя как одна логическая страница, значение False
         /// в противном случае.</returns>
-        private bool UsingLogicalPageNavigation()
+        private static bool UsingLogicalPageNavigation()
         {
             return Window.Current.Bounds.Width < MinimumWidthForSupportingTwoPanes;
         }
@@ -220,6 +238,13 @@ namespace CRM
         {
             Frame.Navigate(typeof(FirstPage));
         }
+
+        private void grdMeeting_SelectionChanged(object sender, Telerik.UI.Xaml.Controls.Grid.DataGridSelectionChangedEventArgs e)
+        {
+            
+            ShortMeetingData  selected = (ShortMeetingData) grdMeeting.SelectedItem;
+            
+        }
     }
 
     public class ShortMeetingData
@@ -229,11 +254,8 @@ namespace CRM
         public DateTime Date { get; set; }
     }
 
-    public class FullMeetingData
+    public class FullMeetingData : ShortMeetingData 
     {
-        public string CustomerName { get; set; }
-
-        public DateTime Date { get; set; }
 
         public string Owner { get; set; }
 
